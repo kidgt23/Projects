@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali M - Computer Engineer Portfolio</title>
+    <link rel="stylesheet" href="basicBody.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div id="planetContainer" style="width: 100px; height: 100px;"></div>
+        <div class="centered-content">
+            <h1>Ali Mohamed</h1>
+            <p>Computer Engineer</p>
+            <p>"We can't solve problems by using the same kind of thinking we used
+                when we created them." - Albert Einstein</p>
+        </div>
+        <div class="hamburger-menu" onclick="toggleNav()">
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+        </div>
+    </header>
+    
+<div id="pixelBackground"></div> 
+
+<nav>
+    <ul>
+        <li><a href="#about" onclick="navigateToSection('about'); return false;">About Me</a></li>
+        <li>
+            Projects
+            <ul class="dropdown">
+                <li><a href="#project1" onclick="navigateToSection('project1'); return false;">Project 1</a></li>
+                <li><a href="#project2" onclick="navigateToSection('project2'); return false;">Project 2</a></li>
+            </ul>
+        </li>
+        <li><a href="#contact" onclick="navigateToSection('contact'); return false;">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my portfolio! I'm a passionate Computer Engineer with a focus in software
+        design and electronics. The following website is meant to show a skill set with HTML,CSS,Javascript.
+        Main goal of the website is to rely more information about the projects I have worked on. I enjoy walking in parks
+        and playing basketball as well as game design. I am currently in my 4th year looking for Engineering roles.
+        </p>
+    </section>
+
+    <section id="project1">
+        <h2>Project 1: Automatic Fan</h2>
+        <p>Using Matlab along with an Arduino I created a project where a Fan would automatically turn on and off depending
+        on the temperature and moisture in the room. This was done using a temperature sensor that was attached to the Arduino and a moisture sensor attached using
+        extra pin set on the board. The system also had a small LED screen along with a button schematic to help start the system. The values were graphed on the screen as temperature versus time and moisture versus time. 
+        The moisture values could be seen either on the graph or on the board itself. The developer can also just view these values in the command prompt of the Arduino or Matlab.</p>
+        <img src="freefangif.gif" alt="Project 1 Visuals">
+    </section>
+
+    <section id="project2">
+        <h2>Project 2: 2D Parking Booking System GUI</h2>
+        <p>Development and Implementation of a Comprehensive Parking Booking System: Spearheaded the development of a GUI-based Java application for efficient parking management, catering to diverse user groups including students, faculty, non-faculty staff, and visitors. The system features robust user authentication, dynamic rate calculation based on user type, and sensor integration for real-time parking space monitoring. Implemented features like automatic account generation for management, user-specific parking rates, and sensor-based parking space detection and reservation.
+
+            Advanced Feature Integration and System Management: Contributed to the system’s extensive functionality, enabling features such as parking space management by system administrators, unique identification for each parking space, and user-friendly navigation aids. Facilitated user interactions with the system through functionalities like booking editing and cancellation, parking time extension, and diverse payment options, enhancing user experience and operational efficiency.
+            
+            Rigorous Testing Using EvoSuite and Randoop: Ensured the reliability and robustness of the system by employing advanced automated testing tools, EvoSuite and Randoop. Utilized EvoSuite for generating high-coverage test suites focusing on the system's critical functionalities, and Randoop for regression testing to identify any unintended changes or errors in the system’s behavior. This strategic approach to testing played a pivotal role in maintaining high software quality and enhancing system reliability.
+        </p>
+        <p>Detailed information about project 2.</p>
+        <img src="venus_th.jpg" alt="Project 2 Visuals">
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out at <a href="mailto:your.email@example.com">pokederp123@gmail.com</a>.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2023 Ali M </p>
+</footer>
+
+<script src="BasicFunction.js"></script>
+</body>
+</html>

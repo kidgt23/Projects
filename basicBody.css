@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8eaf6;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+
+
+
+.centered-content {
+    display: flex;
+    flex-direction: column;  /* Stacks the child elements vertically */
+    align-items: center;     /* Centers the child elements horizontally */
+    justify-content: center; /* Centers the child elements vertically */
+}
+
+
+
+header {
+    background-color: #5c6bc0;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+}
+
+/* Pixelated background styling */
+#pixelBackground {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('Free-Mountain-Backgrounds-Pixel-Art6.png');
+    background-repeat: repeat;
+    background-size: auto;
+    animation: moveBackground 20s infinite;
+    position: fixed; /* Keeps the background fixed while scrolling */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensures the background is behind all other content */
+  }
+  
+  @keyframes moveBackground {
+    0% {
+      background-position: 0 0;
+    }
+    25% {
+      background-position: -100px -100px;
+    }
+    50% {
+      background-position: -200px -200px;
+    }
+    75% {
+      background-position: -100px -100px;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  /* Styling for the content to ensure it's above the pixelated background */
+  .content {
+    position: relative; /* This ensures that the z-index is applicable */
+    z-index: 1; /* Keeps this content above the pixel background */
+    /* Add any other desired styling for your main content container here */
+  }
+  
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.hamburger-bar {
+    width: 25px;
+    height: 3px;
+    background: white;
+}
+
+nav ul {
+    background-color: #5c6bc0;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #3f51b5;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.dropdown li {
+    display: block;
+}
+
+.dropdown li a {
+    color: white;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+section {
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 20px 10%;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #5c6bc0;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li:hover .dropdown {
+        display: none;
+    }
+
+    section {
+        margin: 20px 5%;
+    }
+ #planetContainer,
+#planetContainer canvas {
+    background: transparent;
+}
+
+
+
+}
